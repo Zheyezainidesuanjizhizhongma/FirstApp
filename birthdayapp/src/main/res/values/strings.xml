@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">BirthdayApp</string>
+    <string name="btitle">Happy Birthday!</string>
+    <string name="from" translatable="false">from </string>
+    <string name="surprise">surprise!</string>
+</resources>
+
+

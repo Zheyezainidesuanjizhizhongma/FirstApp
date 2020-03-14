@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">生日快乐程序</string>
+    <string name="btitle">生日快乐！</string>
+    <string name="surprise"> 惊 喜！</string>
+</resources>
