@@ -1,2 +1,2 @@
 rootProject.name='FirstApp'
-include ':app'
+include ':birthdayapp'
