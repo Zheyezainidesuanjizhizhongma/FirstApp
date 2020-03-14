@@ -1,4 +1,4 @@
-package com.swufe.firstapp;
+package com.swufe.myapplication2;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.swufe.firstapp", appContext.getPackageName());
+        assertEquals("com.swufe.myapplication2", appContext.getPackageName());
     }
 }

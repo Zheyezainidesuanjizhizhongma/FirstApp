@@ -1,4 +1,4 @@
-package com.swufe.firstapp;
+package com.swufe.myapplication2;
 
 import org.junit.Test;
 
