@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TestApplication</string>
+    <string name="test_hello">Hello</string>
+    <string name="test_hint_name">Input your name</string>
+    <string name="team_label">Team A</string>
+    <string name="initial_score">0</string>
+    <string name="score_label1">+1 Points</string>
+    <string name="score_label2">+2 Points</string>
+    <string name="score_label3">+3 Points</string>
+    <string name="reset_label">Reset</string>
+    <string name="team1_label">Team B</string>
+    <string name="btn_dollar_label">Dollar</string>
+    <string name="btn_euro_label">Euro</string>
+    <string name="btn_yen_label">Yen</string>
+    <string name="btn_url">For More Info</string>
+    <string name="btn_rmb_hint">Input the amount of RMB</string>
+    <string name="btn_openconfig_label">Config</string>
+    <string name="btn_save_label">Save</string>
+    <string name="menu_set_label">Settings</string>
+    <string name="label_open_list">OpenList</string>
+    <string name="label_school_text">School Information Search</string>
+    <string name="label_school_hint">Please input keyword</string>
+    <string name="label_search_title">search</string>
+</resources>

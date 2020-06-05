@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">App</string>
+    <string name="label_t1">Please input the temperature(°C)</string>
+    <string name="label_t2">The temperature(°F) is transformed to be:</string>
+    <string name="label_t3">0</string>
+    <string name="label_t4">Transform</string>
+</resources>

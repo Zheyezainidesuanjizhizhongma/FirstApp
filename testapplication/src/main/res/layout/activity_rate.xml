@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".RateActivity">
+
+    <EditText
+        android:id="@+id/rmb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:hint="@string/btn_rmb_hint"
+        android:textSize="20sp"
+        android:inputType="numberDecimal"
+        android:gravity="center">
+    </EditText>
+
+    <TextView
+        android:id="@+id/showOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center"
+        android:textSize="30sp">
+    </TextView>
+
+    <Button
+        android:id="@+id/btn_dollar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_dollar_label"
+        android:textSize="20sp"
+        android:onClick="onClick">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_euro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="@string/btn_euro_label"
+        android:textSize="20sp"
+        android:onClick="onClick">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_yen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_yen_label"
+        android:textSize="20sp"
+        android:onClick="onClick">
+    </Button>
+
+    <Button
+        android:id="@+id/btn_opencfg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:onClick="openOne"
+        android:text="@string/btn_openconfig_label"
+        android:textSize="20sp" />
+
+</LinearLayout>

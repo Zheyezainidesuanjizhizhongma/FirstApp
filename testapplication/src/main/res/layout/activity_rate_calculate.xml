@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+    android:paddingBottom="16dp"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".RateCalculateActivity">
+
+    <TextView
+        android:id="@+id/rate_name_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="35sp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/number_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:textSize="20sp"
+        android:hint="@string/btn_rmb_hint"/>
+
+    <TextView
+        android:id="@+id/rate_result_calculate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="30sp"
+        android:text="TextView" />
+</LinearLayout>

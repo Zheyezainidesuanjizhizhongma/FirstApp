@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp"
+    android:orientation="vertical"
+    tools:context=".SchoolAnnounceActivity">
+
+    <TextView
+        android:id="@+id/school_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:text="@string/label_school_text" />
+
+    <EditText
+        android:id="@+id/school_hint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textNoSuggestions"
+        android:hint="@string/label_school_hint" />
+
+    <Button
+        android:id="@+id/btn_search_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="onClick"
+        android:text="@string/label_search_title" />
+
+    <ListView
+        android:id="@+id/school_list"
+        android:layout_width="400dp"
+        android:layout_height="500dp"
+        android:layout_marginTop="10dp"
+        tools:visibility="visible" />
+
+</LinearLayout>
