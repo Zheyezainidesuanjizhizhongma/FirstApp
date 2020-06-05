@@ -1,6 +1,8 @@
 package com.swufe.testapplication;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -21,7 +23,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class MyList2Activity extends ListActivity implements Runnable, AdapterView.OnItemClickListener {
+public class MyList2Activity extends ListActivity implements Runnable, AdapterView.OnItemClickListener, AdapterView.OnItemLongClickListener {
     Handler handler;
     private ArrayList<HashMap<String,String>> listItems; //存放文字、图片信息
     private SimpleAdapter listItemAdapter; //适配器
@@ -42,8 +44,8 @@ public class MyList2Activity extends ListActivity implements Runnable, AdapterVi
             public void handleMessage(@NonNull Message msg) {
                 super.handleMessage(msg);
                 if (msg.what == 9) {
-                    ArrayList<HashMap<String,String>> list3 = (ArrayList<HashMap<String,String>>) msg.obj;
-                    listItemAdapter = new SimpleAdapter(MyList2Activity.this,list3,
+                    listItems = (ArrayList<HashMap<String,String>>) msg.obj;
+                    listItemAdapter = new SimpleAdapter(MyList2Activity.this,listItems,
                             R.layout.activity_my_list2,
                             new String[]{"ItemTitle","ItemDetail"},
                             new int[]{R.id.itemTitle,R.id.itemDetail});
@@ -54,6 +56,7 @@ public class MyList2Activity extends ListActivity implements Runnable, AdapterVi
         };
 
         getListView().setOnItemClickListener(this);
+        getListView().setOnItemLongClickListener(this);
     }
 
     public void initListView(){
@@ -123,5 +126,30 @@ public class MyList2Activity extends ListActivity implements Runnable, AdapterVi
         rateCalculate.putExtra("rate",Float.parseFloat(detailStr));
         startActivity(rateCalculate);
 
+    }
+
+    @Override
+    public boolean onItemLongClick(AdapterView<?> parent, View view, final int position, long id) {
+        Log.i(TAG, "onItemLongClick: 长按列表项position="+position);
+        //删除操作
+//        listItems.remove(position);
+//        listItemAdapter.notifyDataSetChanged(); //更新界面
+
+        //构造对话框进行确认操作
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("提示").setMessage("请确认是否删除当前数据").setPositiveButton("是",new DialogInterface.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Log.i(TAG, "onClick: 对话框事件处理");
+                listItems.remove(position);
+                listItemAdapter.notifyDataSetChanged(); //更新界面
+            }
+        }).setNegativeButton("否",null);
+        builder.create().show();
+
+        Log.i(TAG, "onItemLongClick: size="+listItems.size());
+        return true; //返回false表示不屏蔽短按操作,可以执行短按操作
+                      //返回true表示屏蔽短按操作
     }
 }

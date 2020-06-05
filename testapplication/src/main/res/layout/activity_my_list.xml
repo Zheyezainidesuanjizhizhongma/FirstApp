@@ -4,14 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MyListActivity">
 
-    <GridView
+<!--    <GridView-->
+<!--        android:id="@+id/mylist"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:columnWidth="100dp"-->
+<!--        android:numColumns="auto_fit"/>-->
+<!--        android:numColumns="3"-->
+
+    <ListView
         android:id="@+id/mylist"
         android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </ListView>
+
+    <TextView
+        android:id="@+id/nodata"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:columnWidth="100dp"
-        android:numColumns="auto_fit"/>
-<!--        android:numColumns="3"-->
+        android:gravity="center"
+        android:text="@string/label_no_data">
+    </TextView>
 
 </LinearLayout>

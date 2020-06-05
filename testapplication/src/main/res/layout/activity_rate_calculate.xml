@@ -24,9 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/btn_rmb_hint"
         android:inputType="numberDecimal"
-        android:textSize="20sp"
-        android:hint="@string/btn_rmb_hint"/>
+        android:textSize="20sp" />
 
     <TextView
         android:id="@+id/rate_result_calculate"
@@ -34,5 +34,5 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:textSize="30sp"
-        android:text="TextView" />
+        android:text="" />
 </LinearLayout>
