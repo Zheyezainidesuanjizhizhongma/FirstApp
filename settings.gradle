@@ -1,3 +1,6 @@
 rootProject.name='FirstApp'
 include ':birthdayapp'
 include ':myapplication2'
+include ':app'
+include ':testapplication'
+include ':myapplication3'
