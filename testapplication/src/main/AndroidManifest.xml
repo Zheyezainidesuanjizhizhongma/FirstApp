@@ -17,17 +17,17 @@
         </activity>
         <activity android:name=".RateCalculateActivity" android:theme="@style/Theme.AppCompat.Light.Dialog"/>
         <activity android:name=".MyList2Activity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MyListActivity">
         </activity>
         <activity android:name=".RateListActivity" />
         <activity android:name=".ConfigActivity" />
         <activity android:name=".RateActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity android:name=".ScoreActivity" />
     </application>

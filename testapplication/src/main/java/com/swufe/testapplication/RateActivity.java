@@ -30,6 +30,7 @@ import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class RateActivity extends AppCompatActivity implements Runnable{
     private final String TAG = "rate";
@@ -288,8 +289,19 @@ public class RateActivity extends AppCompatActivity implements Runnable{
         if (item.getItemId()==R.id.menu_set){
             openConfig();
         }else if(item.getItemId()==R.id.open_list){
-            Intent list = new Intent(this,MyList2Activity.class);
-            startActivity(list);
+//            Intent list = new Intent(this,MyList2Activity.class);
+//            startActivity(list);
+            RateItem item1 = new RateItem("aaa","1234");
+            RateManager manager = new RateManager(this);
+            manager.add(item1);
+            manager.add(new RateItem("bbb","5675"));
+            Log.i(TAG, "onOptionsItemSelected: 写入数据完毕");
+
+            //查询数据
+            List<RateItem> testList = manager.listAll();
+            for(RateItem i:testList){
+                Log.i(TAG, "onOptionsItemSelected: 取出数据[id="+i.getId()+"] Name="+i.getCurName()+" Rate="+i.getCurRate());
+            }
         }
 
         return true;
